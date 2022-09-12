@@ -1,0 +1,303 @@
+/* CRIAÇÃO DAS TABELAS E SUAS TRIGGERS
+
+
+
+
+SET SQL DIALECT 3;
+
+
+
+/******************************************************************************/
+/*                                   Tables                                   */
+/******************************************************************************/
+
+
+
+CREATE TABLE TABCLI (
+    ID        INTEGER NOT NULL,
+    FANTASIA  VARCHAR(200),
+    RAZSOC    VARCHAR(200),
+    CNPJ      BIGINT,
+    ENDERECO  VARCHAR(200),
+    TELEFONE  BIGINT
+);
+
+
+
+/******************************************************************************/
+/*                                Primary keys                                */
+/******************************************************************************/
+
+ALTER TABLE TABCLI ADD CONSTRAINT PK_TABCLI PRIMARY KEY (ID);
+
+
+/******************************************************************************/
+/*                                  Triggers                                  */
+/******************************************************************************/
+
+
+
+SET TERM ^ ;
+
+
+
+/******************************************************************************/
+/*                            Triggers for tables                             */
+/******************************************************************************/
+
+
+
+/* Trigger: VALIDATELEFONECLI */
+CREATE OR ALTER TRIGGER VALIDATELEFONECLI FOR TABCLI
+ACTIVE BEFORE INSERT POSITION 0
+AS
+begin
+  if (new.telefone is null) then
+  exception ERROTELEFONECLI;
+end
+^
+SET TERM ; ^
+
+
+
+/******************************************************************************/
+/*                                 Privileges                                 */
+/******************************************************************************/
+
+
+
+/******************************************************************************/
+/*                                   Tables                                   */
+/******************************************************************************/
+
+
+
+CREATE TABLE TABITE (
+    ID         INTEGER NOT NULL,
+    DESCRICAO  VARCHAR(200),
+    MARCA      INTEGER,
+    PRECO      DECIMAL(10,2)
+);
+
+
+
+/******************************************************************************/
+/*                             Unique constraints                             */
+/******************************************************************************/
+
+ALTER TABLE TABITE ADD CONSTRAINT UNQ1_TABITE UNIQUE (DESCRICAO)
+USING INDEX DESCITEM;
+
+
+/******************************************************************************/
+/*                                Primary keys                                */
+/******************************************************************************/
+
+ALTER TABLE TABITE ADD CONSTRAINT PK_TABITE PRIMARY KEY (ID);
+
+
+/******************************************************************************/
+/*                                Foreign keys                                */
+/******************************************************************************/
+
+ALTER TABLE TABITE ADD CONSTRAINT FK_TABITE_MAR FOREIGN KEY (MARCA) REFERENCES TABMAR (ID);
+
+
+/******************************************************************************/
+/*                                 Privileges                                 */
+/******************************************************************************/
+
+
+
+
+/******************************************************************************/
+/*                                   Tables                                   */
+/******************************************************************************/
+
+
+
+CREATE TABLE TABMAR (
+    ID         INTEGER NOT NULL,
+    DESCRICAO  VARCHAR(50)
+);
+
+
+
+/******************************************************************************/
+/*                                Primary keys                                */
+/******************************************************************************/
+
+ALTER TABLE TABMAR ADD CONSTRAINT PK_TABMAR PRIMARY KEY (ID);
+
+
+/******************************************************************************/
+/*                                 Privileges                                 */
+/******************************************************************************/
+
+
+
+
+/******************************************************************************/
+/*                                   Tables                                   */
+/******************************************************************************/
+
+
+
+CREATE TABLE TABPED (
+    ID        INTEGER NOT NULL,
+    CLIENTE   INTEGER,
+    DATA      DATE,
+    TOTALPED  DECIMAL(15,2)
+);
+
+
+
+/******************************************************************************/
+/*                                Primary keys                                */
+/******************************************************************************/
+
+ALTER TABLE TABPED ADD CONSTRAINT PK_TABPED PRIMARY KEY (ID);
+
+
+/******************************************************************************/
+/*                                Foreign keys                                */
+/******************************************************************************/
+
+ALTER TABLE TABPED ADD CONSTRAINT FK_TABPED_CLI FOREIGN KEY (CLIENTE) REFERENCES TABCLI (ID);
+
+
+/******************************************************************************/
+/*                                 Privileges                                 */
+/******************************************************************************/
+
+
+
+
+/******************************************************************************/
+/*                                   Tables                                   */
+/******************************************************************************/
+
+
+
+CREATE TABLE TABPEDITE (
+    IDPED   INTEGER NOT NULL,
+    SEQ     INTEGER NOT NULL,
+    IDITEM  INTEGER NOT NULL,
+    QTD     DECIMAL(15,2),
+    VALOR   DECIMAL(15,2)
+);
+
+
+
+/******************************************************************************/
+/*                                Primary keys                                */
+/******************************************************************************/
+
+ALTER TABLE TABPEDITE ADD CONSTRAINT PK_TABPEDITE PRIMARY KEY (IDPED, SEQ, IDITEM);
+
+
+/******************************************************************************/
+/*                                Foreign keys                                */
+/******************************************************************************/
+
+ALTER TABLE TABPEDITE ADD CONSTRAINT FK_TABPEDITE_1 FOREIGN KEY (IDPED) REFERENCES TABPED (ID);
+ALTER TABLE TABPEDITE ADD CONSTRAINT FK_TABPEDITE_ITE FOREIGN KEY (IDITEM) REFERENCES TABITE (ID);
+
+
+/******************************************************************************/
+/*                                 Privileges                                 */
+/******************************************************************************/
+
+
+
+
+/ * PROCEDURE PARA O RELATÓRIO
+
+SET TERM ^ ;
+
+create or alter procedure retornaped (
+    dataini date,
+    datafim date)
+returns (
+    item bigint,
+    qtd decimal(15,2),
+    descitem varchar(200))
+as
+begin
+    for
+   SELECT FIRST 2 ITE.iditem,SUM(ITE.qtd) AS QTD,ITEM.DESCRICAO AS DESCITEM
+    FROM tabpedite ITE
+    LEFT OUTER JOIN TABITE ITEM ON ITEM.ID = ITE.iditem
+    LEFT OUTER JOIN TABPED PED ON PED.ID = ITE.idped
+    WHERE PED.data BETWEEN cast(:DATAINI as date) AND cast(:DATAFIM as date)
+    GROUP BY ITE.iditem,ITEM.DESCRICAO
+    ORDER BY 2 DESC
+    into :item,:qtd,:descitem
+    do
+    suspend;
+end
+^
+
+SET TERM ; ^
+
+/* Following GRANT statements are generated automatically */
+
+GRANT SELECT ON TABPEDITE TO PROCEDURE RETORNAPED;
+GRANT SELECT ON TABITE TO PROCEDURE RETORNAPED;
+GRANT SELECT ON TABPED TO PROCEDURE RETORNAPED;
+
+/* Existing privileges on this procedure */
+
+GRANT EXECUTE ON PROCEDURE RETORNAPED TO SYSDBA;
+
+
+
+
+/* TRIGGER VALIDAR TELEFONE
+
+CREATE EXCEPTION ERROTELEFONECLI 'Telefone não pode ser vazio';
+
+GRANT USAGE ON EXCEPTION ERROTELEFONECLI TO SYSDBA WITH GRANT OPTION;
+
+
+SET TERM ^ ;
+
+
+
+CREATE OR ALTER TRIGGER VALIDATELEFONECLI FOR TABCLI
+ACTIVE BEFORE INSERT POSITION 0
+AS
+begin
+  if (new.telefone is null) then
+  exception ERROTELEFONECLI;
+end
+^
+SET TERM ; ^
+
+
+
+/* GENERETORS PARA AS TABELAS
+
+CREATE SEQUENCE GEN_TABCLI_ID START WITH 1 INCREMENT BY 1;
+ALTER SEQUENCE GEN_TABCLI_ID RESTART WITH 0;
+
+GRANT USAGE ON SEQUENCE GEN_TABCLI_ID TO SYSDBA WITH GRANT OPTION;
+
+
+
+CREATE SEQUENCE GEN_TABITE_ID START WITH 1 INCREMENT BY 1;
+ALTER SEQUENCE GEN_TABITE_ID RESTART WITH 0;
+
+GRANT USAGE ON SEQUENCE GEN_TABITE_ID TO SYSDBA WITH GRANT OPTION;
+
+
+CREATE SEQUENCE GEN_TABMAR_ID START WITH 1 INCREMENT BY 1;
+ALTER SEQUENCE GEN_TABMAR_ID RESTART WITH 0;
+
+GRANT USAGE ON SEQUENCE GEN_TABMAR_ID TO SYSDBA WITH GRANT OPTION;
+
+
+CREATE SEQUENCE GEN_TABPED_ID START WITH 1 INCREMENT BY 1;
+ALTER SEQUENCE GEN_TABPED_ID RESTART WITH 0;
+
+GRANT USAGE ON SEQUENCE GEN_TABPED_ID TO SYSDBA WITH GRANT OPTION;

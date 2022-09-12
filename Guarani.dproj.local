@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/09/28 23:12:23.000.409,=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\FormUnit1.pas</Transaction>
+    <Transaction>2020/09/28 23:12:28.000.129,=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\WebModuleUnit1.pas</Transaction>
+    <Transaction>2020/10/04 21:27:40.000.482,=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2020/10/04 21:42:01.000.921,=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/03/14 22:55:07.000.021,=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/09/09 16:19:38.607,=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/09/09 17:22:58.971,C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmPrinc.dfm=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2022/09/09 17:22:58.971,C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmPrinc.pas=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2022/09/09 17:23:05.929,C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\Guarani.dproj=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Project2.dproj</Transaction>
+    <Transaction>2022/09/09 17:29:42.114,=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\Unit1.pas</Transaction>
+    <Transaction>2022/09/09 17:29:52.569,C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmCliente.dfm=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\Unit1.dfm</Transaction>
+    <Transaction>2022/09/09 17:29:52.569,C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmCliente.pas=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\Unit1.pas</Transaction>
+    <Transaction>2022/09/09 17:29:55.415,=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\Unit2.pas</Transaction>
+    <Transaction>2022/09/09 17:30:03.177,C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmItem.dfm=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\Unit2.dfm</Transaction>
+    <Transaction>2022/09/09 17:30:03.177,C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmItem.pas=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\Unit2.pas</Transaction>
+    <Transaction>2022/09/09 17:30:07.306,=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\Unit3.pas</Transaction>
+    <Transaction>2022/09/09 17:30:13.954,C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmPedido.dfm=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\Unit3.dfm</Transaction>
+    <Transaction>2022/09/09 17:30:13.954,C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmPedido.pas=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\Unit3.pas</Transaction>
+    <Transaction>2022/09/09 17:30:42.321,=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\Unit1.pas</Transaction>
+    <Transaction>2022/09/09 17:30:52.075,C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmDados.dfm=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\Unit1.dfm</Transaction>
+    <Transaction>2022/09/09 17:30:52.075,C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmDados.pas=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\Unit1.pas</Transaction>
+    <Transaction>2022/09/09 23:16:29.963,=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\Unit4.pas</Transaction>
+    <Transaction>2022/09/09 23:16:42.677,C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmMarca.dfm=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\Unit4.dfm</Transaction>
+    <Transaction>2022/09/09 23:16:42.677,C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmMarca.pas=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\Unit4.pas</Transaction>
+    <Transaction>2022/09/09 23:18:37.786,=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\Unit4.pas</Transaction>
+    <Transaction>2022/09/09 23:18:44.257,C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmPesq.dfm=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\Unit4.dfm</Transaction>
+    <Transaction>2022/09/09 23:18:44.257,C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmPesq.pas=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\Unit4.pas</Transaction>
+    <Transaction>2022/09/11 02:32:23.927,C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmCliente1.pas=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmCliente.pas</Transaction>
+    <Transaction>2022/09/11 02:32:23.928,C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmCliente1.dfm=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmCliente.dfm</Transaction>
+    <Transaction>2022/09/11 02:32:56.642,C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmItem.pas=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmCliente1.pas</Transaction>
+    <Transaction>2022/09/11 02:32:56.642,C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmItem.dfm=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmCliente1.dfm</Transaction>
+    <Transaction>2022/09/11 02:33:08.543,=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmCliente.pas</Transaction>
+    <Transaction>2022/09/11 02:33:38.462,C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmMarca.dfm=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmCliente.dfm</Transaction>
+    <Transaction>2022/09/11 02:33:38.462,C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmMarca.pas=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmCliente.pas</Transaction>
+    <Transaction>2022/09/11 02:33:46.192,=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmCliente.pas</Transaction>
+    <Transaction>2022/09/11 02:34:01.806,C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmPedido.dfm=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmCliente.dfm</Transaction>
+    <Transaction>2022/09/11 02:34:01.806,C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmPedido.pas=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmCliente.pas</Transaction>
+    <Transaction>2022/09/11 02:44:37.819,=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmCliente.pas</Transaction>
+    <Transaction>2022/09/11 22:37:16.417,C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmCliente1.pas=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmCliente.pas</Transaction>
+    <Transaction>2022/09/11 22:37:16.417,C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmCliente1.dfm=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmCliente.dfm</Transaction>
+    <Transaction>2022/09/11 22:37:45.325,=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmCliente.pas</Transaction>
+    <Transaction>2022/09/11 23:09:29.360,=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\Unit1.pas</Transaction>
+    <Transaction>2022/09/11 23:09:47.891,C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmRelatorio.pas=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\Unit1.pas</Transaction>
+    <Transaction>2022/09/11 23:09:47.891,C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\frmRelatorio.dfm=C:\Users\carlo\OneDrive\Documentos\Embarcadero\Studio\Projects\Guarani\Unit1.dfm</Transaction>
+  </Transactions>
+</BorlandProject>
